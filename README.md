@@ -12,37 +12,51 @@ The frequency plots reveal that "Low Fat" products and items sold in Tier 3 loca
 
 ## Dataset Information
 Source: Sales predictions dataset 2023
+
 Records: 8,523 entries
+
 Features: 12 columns (7 categorical, 5 numerical)
-Features
+
+## Features
 # Numerical Features:
-Item_Weight: Weight of the item
-Item_Visibility: Visibility of the item in the store
-Item_MRP: Maximum Retail Price
-Outlet_Establishment_Year: Year when outlet was established
-Item_Outlet_Sales: Sales of the item (Target Variable)
+1- Item_Weight: Weight of the item
+
+2- Item_Visibility: Visibility of the item in the store
+
+3- Item_MRP: Maximum Retail Price
+
+4- Outlet_Establishment_Year: Year when outlet was established
+
+5- Item_Outlet_Sales: Sales of the item (Target Variable)
 
 ## Categorical Features:
-Item_Identifier: Unique ID for items
-Item_Fat_Content: Fat content category (Low Fat/Regular)
-Item_Type: Type of item
-Outlet_Identifier: Unique ID for outlets
-Outlet_Size: Size of the outlet
-Outlet_Location_Type: Tier type of location
-Outlet_Type: Type of outlet
+
+1- Item_Identifier: Unique ID for items
+
+2- Item_Fat_Content: Fat content category (Low Fat/Regular)
+
+3- Item_Type: Type of item
+
+4- Outlet_Identifier: Unique ID for outlets
+
+5- Outlet_Size: Size of the outlet
+
+6- Outlet_Location_Type: Tier type of location
+
+7- Outlet_Type: Type of outlet
 
 ## Methodology
-Data Loading and Inspection
-Data Cleaning (handling missing values, fixing inconsistencies)
-Exploratory Data Analysis
-Data Visualization
-Feature Engineering
-Model Building (to be completed)
-Requirements
-Python 3.x
-pandas
-numpy
-matplotlib
-seaborn
-missingno
+- Data Loading and Inspection
+- Data Cleaning (handling missing values, fixing inconsistencies)
+- Exploratory Data Analysis
+- Data Visualization
+- Feature Engineering
+
+## Requirements
+- Python 3.x
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- missingno
 scikit-learn
