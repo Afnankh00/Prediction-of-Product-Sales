@@ -60,3 +60,46 @@ Features: 12 columns (7 categorical, 5 numerical)
 - seaborn
 - missingno
 scikit-learn
+
+
+##  Models Implemented
+
+### 1. Linear Regression (Baseline)
+- Simple, interpretable model
+- Test R²: ~0.58
+- RMSE: ~$1,069
+
+### 2. Random Forest (Default)
+- Ensemble tree-based model
+- Handles non-linear relationships
+- Better performance than linear regression
+
+### 3. Random Forest (Tuned with GridSearchCV)
+- **Recommended Model** 
+- Hyperparameters tuned: n_estimators, max_depth, min_samples_split, min_samples_leaf
+- 5-fold cross-validation
+- Best test performance
+
+---
+
+##  Data Preprocessing
+
+### Cleaning Steps:
+1.  Removed duplicate records
+2. Standardized categorical variables (e.g., 'LF' → 'Low Fat')
+3. Handled missing values:
+   - Numerical: Median imputation
+   - Categorical: Most frequent imputation
+4.  Scaled numerical features (StandardScaler)
+5.  Encoded categorical features (OneHotEncoder)
+
+### Pipeline:
+```python
+Pipeline([
+    ('preprocessor', ColumnTransformer([
+        ('num', numerical_pipeline, numerical_cols),
+        ('cat', categorical_pipeline, categorical_cols)
+    ])),
+    ('regressor', RandomForestRegressor())
+])
+
